@@ -24,15 +24,14 @@ npu-runtime = [
   "openvino>=2025.0",
   "pillow>=10.4",
   "sentencepiece>=0.2",
-  "transformers>=4.53",
+  "transformers==5.1.0",  # CVE-2026-1839
 ]
 npu = [
   "numpy>=1.26",
   "openvino>=2025.0",
-  "optimum-intel>=1.23",
   "pillow>=10.4",
   "sentencepiece>=0.2",
-  "transformers>=4.53",
+  "transformers==5.1.0",  # CVE-2026-1839
 ]
 classifier-runtime = [
     "pillow>=10.4",
@@ -40,7 +39,7 @@ classifier-runtime = [
     "sentencepiece>=0.2",
     "torch>=2.6",
     "torchvision>=0.21",
-    "transformers>=4.53",
+    "transformers==5.1.0",  # CVE-2026-1839
 ]
 
 [project.scripts]
