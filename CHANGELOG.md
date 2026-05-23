@@ -8,6 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
+- Pinned optional `transformers==5.1.0` in the NPU and classifier runtime
+  extras so TAC-FUSE resolves away from the `Trainer` security advisory while
+  staying on the stable v5 line validated against the packaged SigLIP2 assets.
+- Removed `optimum-intel` from the `npu` extra for now because the published
+  releases still require `transformers<4.58`, which blocks the secure v5 line.
+  TAC-FUSE still emits the same Optimum export command scaffold, but the CLI
+  now needs to be installed separately until upstream support catches up.
 - Pinned runtime `idna==3.15` and `urllib3==2.7.0` in `pyproject.toml` so the
   repo manifest and lockfile resolve away from the current Dependabot security
   advisories instead of depending on a vulnerable transitive floor.
