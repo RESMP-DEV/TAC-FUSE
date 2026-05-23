@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
+- Pinned runtime `idna==3.15` and `urllib3==2.7.0` in `pyproject.toml` so the
+  repo manifest and lockfile resolve away from the current Dependabot security
+  advisories instead of depending on a vulnerable transitive floor.
 - Browser classifier cue now displays the field-facing `tac-fuse-siglp` model
   label instead of exposing the upstream Google SigLIP2 model ID in the UI.
 
