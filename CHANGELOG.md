@@ -15,9 +15,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   releases still require `transformers<4.58`, which blocks the secure v5 line.
   TAC-FUSE still emits the same Optimum export command scaffold, but the CLI
   now needs to be installed separately until upstream support catches up.
-- Pinned runtime `idna==3.15` and `urllib3==2.7.0` in `pyproject.toml` so the
-  repo manifest and lockfile resolve away from the current Dependabot security
-  advisories instead of depending on a vulnerable transitive floor.
+- Pinned runtime `idna==3.15` and advanced `urllib3` to `2.8.0` in
+  `pyproject.toml` so the repo manifest and lockfile resolve away from the
+  current Dependabot security advisories instead of depending on a vulnerable
+  transitive floor. OSV reports that `2.8.0` fixes the three advisories that
+  still affected `2.7.0`: CVE-2026-97687, CVE-2026-97688 and CVE-2026-97689.
 - Browser classifier cue now displays the field-facing `tac-fuse-siglp` model
   label instead of exposing the upstream Google SigLIP2 model ID in the UI.
 
